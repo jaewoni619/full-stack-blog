@@ -32,7 +32,7 @@ const Navbar = () => {
             </div>
         </div>
         {/*DESKTOP MENU*/}
-        <div className='hidden md:flex items-center gap-8 xl:gap-12 font-medium'>
+        <div className='hidden md:flex items-center gap-8 xl:gap-12 font-medium 2xl:gap-16'>
           <Link to="/">Home</Link>
           <Link to="/">Trending</Link>
           <Link to="/">Most Popular</Link>
