@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom"
+import MainCategories from "../components/MainCategories"
+import FeaturedPosts from "../components/FeaturedPosts"
+import PostList from "../components/PostList"
 
 const Homepage = () => {
     return(
-        <div className="mt-4 felx flex-col gap-4">
+        <div className="mt-4 flex flex-col gap-4">
             {/*BREADCRUMBS*/}
             <div className="flex gap-4">
                 <Link to="/" >Home</Link>
@@ -21,7 +24,7 @@ const Homepage = () => {
                     </p>
                 </div>
                 {/* animated button */}
-                <Link to="wrtie" className="relative">
+                <Link to="write" className="hidden md:block relative">
                 <svg
                         viewBox="0 0 200 200"
                         width="200"
@@ -54,8 +57,15 @@ const Homepage = () => {
                 </button>
                 </Link>
             </div>
+            {/*CATEGORIES*/}
+            <MainCategories />
             {/*FEATURE POST*/}
+            <FeaturedPosts />
             {/*POST LIST*/}
+            <div className="">
+                <h1 className="my-8 text-2xl text-gray-600">Recent Posts</h1>
+                <PostList />
+            </div>
         </div>
     )
 }
